@@ -49,6 +49,16 @@ body {
     color: #FF9B44 !important;
 }
 
-.active {
-    color: $orangelight;
+.navbar-dark .navbar-brand {
+    color: #FF9B44;    
+    font-size: 2rem;
+}
+
+.navbar-dark .navbar-brand:hover {
+    color: #FF9B44;
+    font-size: 2rem;
+}
+
+.nav-type {
+    color: black;
 }
