@@ -15,37 +15,8 @@
         
     </head>
     <body>
-
-        <nav class="navbar grey navbar-expand-md navbar-dark fixed-top ">
-            <div class="container-fluid">
-                <image class="logoE" src="./images/logo.png"></image>
-                <a class="navbar-brand navbar-padding" href="#">Eco IT</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                        <li class="nav-item">
-                            <a class="nav-title nav-link active" aria-current="page" href="#">Catalogue</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-title nav-link" href="#">Mon Profil</a>
-                        </li>
-                    </ul>
-                    
-                    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                        <input type="search" class="orange-juice form-control form-control-dark" placeholder="Recherche..." aria-label="Search">
-                    </form>
-
-                    <div class="text-end">
-                        <button type="button" class="btn orange btn-outline-light me-2">Login</button>
-                        <button type="button" class="btn orange btn-warning">Sign-up</button>
-                    </div>
-                </div>
-            </div>
-        </nav>
-
-
+        {% include 'base/nav.html.twig' %}
         {% block body %}{% endblock %}
+        {% include 'base/footer.html.twig' %}
     </body>
 </html>
