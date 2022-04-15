@@ -1,5 +1,5 @@
 body {
-    min-height: 75rem;
+    min-height: 50rem;
     padding-top: 4.8rem;
   }
 
@@ -32,6 +32,7 @@ body {
     border-color: $orange;
     color: $orange;
     background-color: $orangelight;
+    margin: 3px;
 }
 .orange-juice:focus {
     background-color: $orangelight;
@@ -57,4 +58,26 @@ body {
 .navbar-dark .navbar-brand:hover {
     color: #FF9B44;
     font-size: 2rem;
+}
+
+.pomme {
+    display: flex;
+    height: 28vh;
+}
+
+.btn-lg {
+    margin-top: 10px;
+}
+
+.navbar-brand {
+    font-family: $ver;
+    font-style: italic;
+}
+
+.ver {
+    font-family: $ver;
+}
+
+.cali {
+    font-family: $cali;
 }
