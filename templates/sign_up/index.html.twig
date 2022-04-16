@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block body %}
+<div class="form_wrapper ver">
+    <div class="form_container">
+        <div class="title_container">
+            <h2>Formulaire d'inscription</h2>
+        </div>
+        <div class="row clearfix">
+            <div class="">
+                <form>
+                    <div class="input_field"> 
+                        <input class="orange-passion" type="email" name="email" placeholder="Email" required />
+                    </div>
+                    <div class="input_field">
+                        <input class="orange-passion" type="password" name="password" placeholder="Mot de passe" required />
+                    </div>
+                    <div class="input_field">
+                        <input class="orange-passion" type="password" name="password" placeholder="Confirmer Mot de passe" required />
+                    </div>
+                    <div class="input_field">
+                        <input class="orange-passion" type="pseudo" name="pseudo" placeholder="Pseudo" required />
+                    </div>
+                    <div class="row clearfix">
+                        <div class="col_half">
+                            <div class="input_field">
+                                <input class="orange-passion" type="text" name="name" placeholder="Prénom" />
+                            </div>
+                        </div>
+                        <div class="col_half">
+                            <div class="input_field">
+                                <input class="orange-passion" type="text" name="name" placeholder="Nom" required />
+                            </div>
+                        </div>
+                    </div>
+                    <input class="button" type="submit" value="Enregistrer vous !" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="pomme-reinette"></div>
+{% endblock %}
