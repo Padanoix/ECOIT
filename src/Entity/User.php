@@ -24,6 +24,15 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'string')]
     private $password;
 
+    #[ORM\OneToOne(mappedBy: 'user', targetEntity: Admin::class, cascade: ['persist', 'remove'])]
+    private $admin;
+
+    #[ORM\OneToOne(mappedBy: 'user', targetEntity: Student::class, cascade: ['persist', 'remove'])]
+    private $student;
+
+    #[ORM\OneToOne(mappedBy: 'user', targetEntity: Formateur::class, cascade: ['persist', 'remove'])]
+    private $formateur;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -92,5 +101,71 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    public function getAdmin(): ?Admin
+    {
+        return $this->admin;
+    }
+
+    public function setAdmin(?Admin $admin): self
+    {
+        // unset the owning side of the relation if necessary
+        if ($admin === null && $this->admin !== null) {
+            $this->admin->setUser(null);
+        }
+
+        // set the owning side of the relation if necessary
+        if ($admin !== null && $admin->getUser() !== $this) {
+            $admin->setUser($this);
+        }
+
+        $this->admin = $admin;
+
+        return $this;
+    }
+
+    public function getStudent(): ?Student
+    {
+        return $this->student;
+    }
+
+    public function setStudent(?Student $student): self
+    {
+        // unset the owning side of the relation if necessary
+        if ($student === null && $this->student !== null) {
+            $this->student->setUser(null);
+        }
+
+        // set the owning side of the relation if necessary
+        if ($student !== null && $student->getUser() !== $this) {
+            $student->setUser($this);
+        }
+
+        $this->student = $student;
+
+        return $this;
+    }
+
+    public function getFormateur(): ?Formateur
+    {
+        return $this->formateur;
+    }
+
+    public function setFormateur(?Formateur $formateur): self
+    {
+        // unset the owning side of the relation if necessary
+        if ($formateur === null && $this->formateur !== null) {
+            $this->formateur->setUser(null);
+        }
+
+        // set the owning side of the relation if necessary
+        if ($formateur !== null && $formateur->getUser() !== $this) {
+            $formateur->setUser($this);
+        }
+
+        $this->formateur = $formateur;
+
+        return $this;
     }
 }
