@@ -19,8 +19,6 @@ class Admin
     #[ORM\OneToOne(inversedBy: 'admin', targetEntity: User::class, cascade: ['persist', 'remove'])]
     private $user;
 
-    #[ORM\Column(type: 'string', length: 255)]
-    private $Student;
 
     public function getId(): ?int
     {
@@ -47,18 +45,6 @@ class Admin
     public function setUser(?User $user): self
     {
         $this->user = $user;
-
-        return $this;
-    }
-
-    public function getStudent(): ?string
-    {
-        return $this->Student;
-    }
-
-    public function setStudent(string $Student): self
-    {
-        $this->Student = $Student;
 
         return $this;
     }
