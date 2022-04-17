@@ -42,3 +42,10 @@ symfony check:requirements
 symfony serve -d
 ```
 
+### Lancer des tests
+
+```bash
+php bin/phpunit --testdox
+```
+
+
