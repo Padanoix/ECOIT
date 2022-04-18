@@ -22,6 +22,20 @@ class FormationRepository extends ServiceEntityRepository
     }
 
     /**
+     * @return Formation[]
+     */
+    public function lastTree()
+    {
+        return $this->createQueryBuilder('f')
+        ->orderBy('f.id','DESC')
+        ->setMaxResults(3)
+        ->getQuery()
+        ->getResult()
+        ;
+    }
+
+
+    /**
      * @throws ORMException
      * @throws OptimisticLockException
      */

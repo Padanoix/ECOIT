@@ -47,5 +47,9 @@ symfony serve -d
 ```bash
 php bin/phpunit --testdox
 ```
+### Ajouter des données de test
 
+```bash
+symfony console doctrine:fixtures:load
+```
 
