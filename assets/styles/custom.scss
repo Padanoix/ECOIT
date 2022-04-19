@@ -86,3 +86,39 @@ body {
 .cali {
     font-family: $cali;
 }
+
+.photoF-home {
+    width: 200px;
+    height: 200px;
+}
+
+.photoF-catalogue {
+    width: 400px;
+    height: 400px;
+}
+
+@media (max-width:450px) {
+    .photoF-home{
+        width: 40vh;
+        height: 40vh;
+    }
+}
+
+.page-link {
+    color: $orange;
+}
+
+.page-link:hover {
+    color: $orange;
+}
+
+.page-link:focus {
+    color: $orange;
+    border-color: $orange;
+    box-shadow: 0 0 0 .10rem rgba($color: #FF9B44, $alpha: 1.0);
+}
+
+.page-item.active .page-link{
+    background-color: $orange;
+    border-color: $orange;
+}

@@ -40,7 +40,9 @@ class AppFixtures extends Fixture
             $formation = new Formation();
 
             $formation  ->setTitre($faker->words(3,true))
-                        ->setSection(array($faker->randomFloat(0,10,9999)));
+                        ->setSection(array($faker->randomFloat(0,10,9999)))
+                        ->setDescription($faker->text())
+                        ->setPhotoPF('/images/formation.png');
 
             $manager->persist($formation);
         }

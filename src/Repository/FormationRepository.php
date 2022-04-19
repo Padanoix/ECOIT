@@ -28,7 +28,7 @@ class FormationRepository extends ServiceEntityRepository
     {
         return $this->createQueryBuilder('f')
         ->orderBy('f.id','DESC')
-        ->setMaxResults(3)
+        ->setMaxResults(5)
         ->getQuery()
         ->getResult()
         ;
