@@ -24,6 +24,12 @@ class Formation
     #[ORM\OneToMany(mappedBy: 'section', targetEntity: Section::class)]
     private $sections;
 
+    #[ORM\Column(type: 'text')]
+    private $description;
+
+    #[ORM\Column(type: 'string', length: 255)]
+    private $PhotoPF;
+
     public function __construct()
     {
         $this->sections = new ArrayCollection();
@@ -84,6 +90,30 @@ class Formation
                 $section->setSection(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(string $description): self
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    public function getPhotoPF(): ?string
+    {
+        return $this->PhotoPF;
+    }
+
+    public function setPhotoPF(string $PhotoPF): self
+    {
+        $this->PhotoPF = $PhotoPF;
 
         return $this;
     }
